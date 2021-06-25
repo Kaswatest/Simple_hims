@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/Login.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <span id="alertmsg"></span>
+                <h1 class="text-light pb-5">Login Form</h1>
+                <div class="text-center">
+                    <img class=" img-fluid rounded-circle " src="Images/Login_img.gif" alt="Where Image">
+                </div>
+                <form id="testForm" method="GET">
+                    <div class="form-group">
+                        <label for="" id="Ue_Lbl">User Email</label>
+                        <input type="email" class="form-control" placeholder="Enter Your Registered Email" id="Uname">
+                    </div>
+                    <div class="form-group">
+                        <label for="" id="Up_Lbl">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter Your Password" id="Upass">
+                    </div>
+                    <div class="chechbox " id="Remember">
+                        <label for=""><input type="checkbox">Remember Me</label>
+                    </div>
+                    <!-- <input type="button" value="Login" class="btn btn-success btn-block" onclick="getdata()"
+                        id="btnlogin" /> -->
+                    <button type="button" class="btn btn-success btn-block" onclick="getdata()"
+                        id="btnlogin">Login</button>
+                    <a href="" class="text-muted">Forget Password</a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="blog-footer pt-3 pb-1 my-5 text-center text-light">
+        <p>HIMS by Kaswa <a href="">HIMS Management System</a> by <a href="">@HIMS</a>.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        function getdata() {
+            let uname = document.getElementById("Uname").value;
+            let Upass = document.getElementById("Upass").value;
+            if (uname == "admin@gmail.com" && Upass == "admin") {
+                // disable button
+                $("#btnlogin").prop("disabled", true);
+
+                // add spinner to button for some time
+                $("#btnlogin").html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden = "true" ></span > Analyzing...');
+
+                setTimeout(function () {
+                    $("#btnlogin").html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden = "true" ></span > Checked');
+                }, 3000);
+                // $("#testForm").submit();
+                window.open("Dashboard.html", '_self');
+            }
+            else {
+                $("#alertmsg").html('<div class="alert alert-warning alert-dismissible fade show" role="alert"> <strong>Opps!</strong> You enter wrong credentials. <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
+            }
+        }
+
+    </script>
+</body>
+
+</html>

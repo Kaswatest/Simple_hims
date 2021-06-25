@@ -1,0 +1,50 @@
+.col-lg-4{
+    border: solid white;
+    padding: 60px 40px;
+    margin-top: 50px;
+}
+body{
+    background: url("https://wallpaperaccess.com/full/486753.jpg");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#Ue_Lbl{
+    color: white;
+}
+#Up_Lbl{
+    color: white;
+}
+#Remember{
+    color: white;
+}
+img{
+    width: 150px;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+#loading {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0.7;
+    background-color: #fff;
+    z-index: 99;
+  }
+  
+  #loading-image {
+    position: absolute;
+    top: 100px;
+    left: 240px;
+    z-index: 100;
+  }
+  
