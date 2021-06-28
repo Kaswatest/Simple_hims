@@ -47,4 +47,8 @@ h1{
     left: 240px;
     z-index: 100;
   }
+  .required::after{
+    content:" *";
+    color: red;
+  }
   

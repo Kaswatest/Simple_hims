@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Simple_hims/Login.css">
+    <link rel="stylesheet" href="css/Login.css">
     <title>Document</title>
 
 </head>
@@ -19,15 +19,15 @@
                 <span id="alertmsg"></span>
                 <h1 class="text-light pb-5">Login Form</h1>
                 <div class="text-center">
-                    <img class=" img-fluid rounded-circle " src="/Simple_hims/Login_img.gif" alt="Where Image">
+                    <img class=" img-fluid rounded-circle " src="Images/Login_img.gif" alt="Where Image">
                 </div>
                 <form id="testForm" method="GET">
                     <div class="form-group">
-                        <label for="" id="Ue_Lbl">User Email</label>
-                        <input type="email" class="form-control" placeholder="Enter Your Registered Email" id="Uname">
+                        <label for="" id="Ue_Lbl" class="required">User Email</label>
+                        <input type="email" class="form-control" placeholder="Enter Your Registered Email" id="Uname" autofocus="autofocus">
                     </div>
                     <div class="form-group">
-                        <label for="" id="Up_Lbl">Password</label>
+                        <label for="" id="Up_Lbl" class="required">Password</label>
                         <input type="password" class="form-control" placeholder="Enter Your Password" id="Upass">
                     </div>
                     <div class="chechbox " id="Remember">
@@ -72,7 +72,13 @@
                     $("#btnlogin").html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden = "true" ></span > Checked');
                 }, 3000);
                 // $("#testForm").submit();
-                window.open("DashBoard.html", '_self');
+                window.open("Dashboard.html", '_self');
+            }
+            else if (uname == "") {
+                $("#alertmsg").html('<div class="alert alert-warning alert-dismissible fade show" role="alert"> <strong>Warning!</strong> Please Must Enter User Name. <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
+            }
+            else if (Upass == "") {
+                $("#alertmsg").html('<div class="alert alert-warning alert-dismissible fade show" role="alert"> <strong>Warning!</strong> Please Must Enter Password. <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
             }
             else {
                 $("#alertmsg").html('<div class="alert alert-warning alert-dismissible fade show" role="alert"> <strong>Opps!</strong> You enter wrong credentials. <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
