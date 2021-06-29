@@ -1,7 +1,9 @@
 .col-lg-4{
-    border: solid white;
     padding: 60px 40px;
     margin-top: 50px;
+    -webkit-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
+    box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
 }
 body{
     background: url("https://wallpaperaccess.com/full/486753.jpg");
