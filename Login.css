@@ -1,21 +1,18 @@
 .col-lg-4{
     
-    padding: 60px 40px;
-    margin-top: 50px;
+    
     -webkit-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
     -moz-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
     box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
 }
 .col-md-6{
-    padding: 60px 40px;
-    margin-top: 25px;
+    
     -webkit-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
     -moz-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
     box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
 }
 .col-sm-8{
-    padding: 60px 40px;
-    margin-top: 15px;
+    
     -webkit-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
     -moz-box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
     box-shadow: -5px 2px 62px 8px rgba(0,0,0,0.75);
@@ -73,7 +70,7 @@ h1{
   {
     .col-lg-4{
         border: none;
-        padding: 60px 40px;
+       
         margin-top: 10px;
     }
   }
