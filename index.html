@@ -60,6 +60,21 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script>
+        var inputUName = document.getElementById("Uname");
+        inputUName.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("btnlogin").click();
+            }
+        });
+
+        var inputUPass = document.getElementById("Upass");
+        inputUPass.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("btnlogin").click();
+            }
+        });
         function getdata() {
             let uname = document.getElementById("Uname").value;
             let Upass = document.getElementById("Upass").value;
