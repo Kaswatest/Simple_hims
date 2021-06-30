@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Simple_hims/Login.css">
+    <link rel="stylesheet" href="css/Login.css">
     <title>Document</title>
-
 </head>
 
 <body>
@@ -17,16 +16,17 @@
         <div class="row text-center justify-content-center">
             <span id="alertmsg"></span>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center ">
             <div class="col-lg-4 col-md-6 col-sm-8 mt-5">
                 <h1 class="text-light pb-5">Login Form</h1>
                 <div class="text-center">
-                    <img class=" img-fluid rounded-circle " src="/Simple_hims/Login_img.gif" alt="Where Image">
+                    <img class=" img-fluid rounded-circle " src="Images/Login_img.gif" alt="Where Image">
                 </div>
                 <form id="testForm" method="GET">
                     <div class="form-group">
                         <label for="" id="Ue_Lbl" class="required">User Email</label>
-                        <input type="email" class="form-control" placeholder="Enter Your Registered Email" id="Uname" autofocus="autofocus">
+                        <input type="email" class="form-control" placeholder="Enter Your Registered Email" id="Uname"
+                            autofocus="autofocus">
                     </div>
                     <div class="form-group">
                         <label for="" id="Up_Lbl" class="required">Password</label>
@@ -43,13 +43,14 @@
                 </form>
             </div>
         </div>
-
     </div>
 
     <!-- Footer -->
-    <footer class="blog-footer pt-3 pb-1 text-center text-light">
+    <footer class="blog-footer pb-1 text-center text-light">
         <p>HIMS by Kaswa <a href="">HIMS Management System</a> by <a href="">@HIMS</a>.</p>
     </footer>
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -60,6 +61,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script>
+
         var inputUName = document.getElementById("Uname");
         inputUName.addEventListener("keyup", function (event) {
             if (event.keyCode === 13) {
@@ -78,7 +80,7 @@
         function getdata() {
             let uname = document.getElementById("Uname").value;
             let Upass = document.getElementById("Upass").value;
-            if (uname == "admin@gmail.com" && Upass == "admin") {
+            if (uname == "" && Upass == "") {
                 // disable button
                 $("#btnlogin").prop("disabled", true);
 
@@ -88,8 +90,7 @@
                 setTimeout(function () {
                     $("#btnlogin").html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden = "true" ></span > Checked');
                     window.open("DashBoard.html", '_self');
-                }, 3000);
-                // $("#testForm").submit();
+                }, 2000);
             }
             else if (uname == "") {
                 $("#alertmsg").html('<div class="alert alert-warning alert-dismissible fade show" role="alert"> <strong>Warning!</strong> Please Must Enter User Name. <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
@@ -100,10 +101,19 @@
                 document.getElementById('Upass').focus()
             }
             else {
-                $("#alertmsg").html('<div class="alert alert-warning alert-dismissible fade show" role="alert"> <strong>Opps!</strong> You enter wrong credentials. <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
+                //for time being just commment this and write below code because of hardcode
+                // $("#alertmsg").html('<div class="alert alert-warning alert-dismissible fade show" role="alert"> <strong>Opps!</strong> You enter wrong credentials. <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
+                $("#btnlogin").prop("disabled", true);
+
+                // add spinner to button for some time
+                $("#btnlogin").html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden = "true" ></span > Analyzing...');
+
+                setTimeout(function () {
+                    $("#btnlogin").html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden = "true" ></span > Checked');
+                    window.open("DashBoard.html", '_self');
+                }, 2000);
             }
         }
-
     </script>
 </body>
 
