@@ -1,0 +1,23 @@
+
+body{
+    background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4430159a-24ce-4291-8254-173eb8dbfebb/d7f8qv7-9db0c547-6eac-4b13-81ec-6b6908be04ab.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ0MzAxNTlhLTI0Y2UtNDI5MS04MjU0LTE3M2ViOGRiZmViYlwvZDdmOHF2Ny05ZGIwYzU0Ny02ZWFjLTRiMTMtODFlYy02YjY5MDhiZTA0YWIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2bGPVC_fthZyVjIn28vVkzFXlEU8D8F0ytUDuZsZej0");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    
+}
+.required::after{
+    content:" *";
+    color: red;
+}
+
+
+
+@media only screen and (max-width: 480px)
+{
+    .RemoveTabText{
+        display: none;
+    }
+}

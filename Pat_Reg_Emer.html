@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/Simple_hims/Pat_Reg.css">
+
+    <link rel="stylesheet" href="css/Pat_Reg_Emer.css">
     <title>Document</title>
 </head>
 
@@ -62,30 +63,38 @@
 
     <div class="container">
 
-        <ul class="nav nav-tabs mt-5 pt-5">
+        <ul class="nav nav-tabs mt-5 pt-5 text-center">
             <li class="nav-item">
-              <a class="nav-link active" href="./Pat_Reg_Emer.html"><i class="fa fa-building-o pr-1"
-                aria-hidden="true"></i>Emergency</a>
+                <a class="nav-link active" href="./Pat_Reg_Emer.html"><i class="fa fa-building-o pr-1"
+                        aria-hidden="true"></i>
+                    <div class="RemoveTabText">Emergency </div>
+                </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./Pat_Reg_Outdoor.html"><i class="fa fa-window-restore pr-1"
-                aria-hidden="true"></i>Outdoor</a>
+                <a class="nav-link" href="./Pat_Reg_Outdoor.html"><i class="fa fa-window-restore pr-1"
+                        aria-hidden="true"></i>
+                    <div class="RemoveTabText"> Outdoor </div>
+                </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-user-plus pr-1" aria-hidden="true"></i>Indoor</a>
+                <a class="nav-link" href="#"><i class="fa fa-user-plus pr-1" aria-hidden="true"></i>
+                    <div class="RemoveTabText"> Indoor </div>
+                </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-user-circle-o pr-1" aria-hidden="true"></i>Private</a>
+                <a class="nav-link" href="#"><i class="fa fa-user-circle-o pr-1" aria-hidden="true"></i>
+                    <div class="RemoveTabText"> Private </div>
+                </a>
             </li>
-          </ul>
+        </ul>
 
         <h2 class="mt-3 py-5 text-white"><u>Patient Registration Form (Emergency)</u></h2>
-        <div class="Row text-center"> 
+        <div class="Row text-center">
             <span id="alertmsg"></span>
         </div>
         <div class="row">
             <div class="col pt-3 pb-3" style="border: 2px solid white">
-                
+
                 <form>
                     <div class="form-row">
                         <div class="form-group col-md-4">
@@ -164,7 +173,7 @@
                         <button type="button" class="btn btn-info btn-lg text-white"
                             onclick="Chk_ReqFields()">Register</button>
 
-                            <!-- How add modal -->
+                        <!-- How add modal -->
                         <!-- <div class="modal fade" id="myModal" role="dialog">
                             <div class="modal-dialog">
                                 <div class="alert alert-success alert-dismissible">
@@ -212,7 +221,7 @@
             let Pat_City = document.getElementById("Pat_City").value;
             let Pat_State = document.getElementById("Pat_State").value;
 
-            if ((Pat_Name  && Pat_Cnic && Pat_Phoneno && Pat_Address && Pat_City) == "") {
+            if ((Pat_Name && Pat_Cnic && Pat_Phoneno && Pat_Address && Pat_City) == "") {
                 $("#alertmsg").html('<div class="alert alert-warning alert-dismissible fade show" role="alert"> <strong>Warning!</strong> Please Must Enter All Required Feilds (*). <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
             }
             else {
