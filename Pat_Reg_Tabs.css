@@ -24,13 +24,16 @@ body{
 
 .setdecoration a:hover
     {
-        border: none;
-          background: #5a64f1;
-          color:#fff;
-          border-radius:0;
-          transition:background 0.20s linear;
-      }
-
+        
+    background: #5a64f1;
+    color:#fff;
+    transition:background 0.20s linear;
+    border: 1px solid #2e90d1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+    padding: 3px 3px 5px 5px;
+}
 .RemoveTabText{
     display: inline-block;
 }
