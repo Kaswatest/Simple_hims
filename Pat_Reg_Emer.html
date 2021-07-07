@@ -225,6 +225,13 @@
                 $("#alertmsg").html('<div class="alert alert-warning alert-dismissible fade show" role="alert"> <strong>Warning!</strong> Please Must Enter All Required Feilds (*). <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
             }
             else {
+                document.getElementById("Pat_Name").value="";
+                document.getElementById("Pat_Cnic").value="";
+                document.getElementById("Pat_Phoneno").value="";
+                document.getElementById("Pat-Address").value="";
+                document.getElementById("Pat_City").value="";
+                document.getElementById("Pat_State").value="";
+                document.getElementById("Pat_Name").focus();
                 $("#alertmsg").html('<div class="alert alert-success alert-dismissible fade show" role="alert"> <strong>Success!</strong> Patient Registered Successfully... <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>');
             }
         }
